@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "sn.isi.m2gl"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "monolith",
+    "baseName": "dbfirstexo",
+    "packageName": "sn.isi.m2gl",
+    "packageFolder": "sn/isi/m2gl",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NDYwNDFiY2I2MTdiNDQwYjRmZTc1ZjQ4MDQ2NjhjMzhhOWJlYzI5MjhjNWQ1MDljMjAxODA4YzJjMmMyN2QyY2ViYzY1Mzg1ZmRkNDViODlmNWYzMzExOWQzODlhMTNkODJmYTM5YjRiZTMxNGJjMDM3NGJkZmQ4OTZkNDYxYTE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1610654996095,
+    "testFrameworks": ["protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
