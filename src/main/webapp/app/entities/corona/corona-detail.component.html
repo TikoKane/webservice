@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="corona">
+            <h2><span>Corona</span> {{ corona.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Nombrecasparjour</span></dt>
+                <dd>
+                    <span>{{ corona.nombrecasparjour }}</span>
+                </dd>
+                <dt><span>Caspositif</span></dt>
+                <dd>
+                    <span>{{ corona.caspositif }}</span>
+                </dd>
+                <dt><span>Cascommunautaire</span></dt>
+                <dd>
+                    <span>{{ corona.cascommunautaire }}</span>
+                </dd>
+                <dt><span>Casgrave</span></dt>
+                <dd>
+                    <span>{{ corona.casgrave }}</span>
+                </dd>
+                <dt><span>Guerison</span></dt>
+                <dd>
+                    <span>{{ corona.guerison }}</span>
+                </dd>
+                <dt><span>Deces</span></dt>
+                <dd>
+                    <span>{{ corona.deces }}</span>
+                </dd>
+                <dt><span>Cascontact</span></dt>
+                <dd>
+                    <span>{{ corona.cascontact }}</span>
+                </dd>
+                <dt><span>Casimporte</span></dt>
+                <dd>
+                    <span>{{ corona.casimporte }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/corona', corona.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

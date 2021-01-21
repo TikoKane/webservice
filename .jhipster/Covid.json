@@ -1,0 +1,29 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "nombretest",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "positifcas",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "changelogDate": "20210121004139",
+  "dto": "no",
+  "searchEngine": "elasticsearch",
+  "service": "serviceImpl",
+  "entityTableName": "covid",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "pagination"
+}

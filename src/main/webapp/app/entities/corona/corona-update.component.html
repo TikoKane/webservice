@@ -1,0 +1,98 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-corona-heading">Create or edit a Corona</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_nombrecasparjour">Nombrecasparjour</label>
+                    <input type="text" class="form-control" name="nombrecasparjour" id="field_nombrecasparjour"
+                           formControlName="nombrecasparjour"/>
+                    <div *ngIf="editForm.get('nombrecasparjour')!.invalid && (editForm.get('nombrecasparjour')!.dirty || editForm.get('nombrecasparjour')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('nombrecasparjour')?.errors?.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_caspositif">Caspositif</label>
+                    <input type="text" class="form-control" name="caspositif" id="field_caspositif"
+                           formControlName="caspositif"/>
+                    <div *ngIf="editForm.get('caspositif')!.invalid && (editForm.get('caspositif')!.dirty || editForm.get('caspositif')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('caspositif')?.errors?.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cascommunautaire">Cascommunautaire</label>
+                    <input type="text" class="form-control" name="cascommunautaire" id="field_cascommunautaire"
+                           formControlName="cascommunautaire"/>
+                    <div *ngIf="editForm.get('cascommunautaire')!.invalid && (editForm.get('cascommunautaire')!.dirty || editForm.get('cascommunautaire')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cascommunautaire')?.errors?.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_casgrave">Casgrave</label>
+                    <input type="text" class="form-control" name="casgrave" id="field_casgrave"
+                           formControlName="casgrave"/>
+                    <div *ngIf="editForm.get('casgrave')!.invalid && (editForm.get('casgrave')!.dirty || editForm.get('casgrave')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('casgrave')?.errors?.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_guerison">Guerison</label>
+                    <input type="text" class="form-control" name="guerison" id="field_guerison"
+                           formControlName="guerison"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_deces">Deces</label>
+                    <input type="text" class="form-control" name="deces" id="field_deces"
+                           formControlName="deces"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cascontact">Cascontact</label>
+                    <input type="text" class="form-control" name="cascontact" id="field_cascontact"
+                           formControlName="cascontact"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_casimporte">Casimporte</label>
+                    <input type="text" class="form-control" name="casimporte" id="field_casimporte"
+                           formControlName="casimporte"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

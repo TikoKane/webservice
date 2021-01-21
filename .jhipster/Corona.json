@@ -1,0 +1,56 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "nombrecasparjour",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "caspositif",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "cascommunautaire",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "casgrave",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "guerison",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "deces",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "cascontact",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "casimporte",
+      "fieldType": "String",
+      "fieldValidateRules": []
+    }
+  ],
+  "changelogDate": "20210121182541",
+  "dto": "no",
+  "searchEngine": "elasticsearch",
+  "service": "serviceImpl",
+  "entityTableName": "corona",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination"
+}

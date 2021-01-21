@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="covid">
+            <h2><span>Covid</span> {{ covid.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Nombretest</span></dt>
+                <dd>
+                    <span>{{ covid.nombretest }}</span>
+                </dd>
+                <dt><span>Positifcas</span></dt>
+                <dd>
+                    <span>{{ covid.positifcas }}</span>
+                </dd>
+                <dt><span>Date</span></dt>
+                <dd>
+                    <span>{{ covid.date }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/covid', covid.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
